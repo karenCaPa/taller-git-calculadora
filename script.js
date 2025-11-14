@@ -32,3 +32,28 @@ function restar() {
     mostrarResultado("Error");
   }
 }
+
+function multiplicar() {
+  try {
+    const { n1, n2 } = obtenerNumeros();
+    mostrarResultado(n1 * n2);
+  } catch (error) {
+    mostrarResultado("Error");
+  }
+}
+
+function dividir() {
+  try {
+    const { n1, n2 } = obtenerNumeros();
+
+    if (n2 === 0) {
+      alert("No se puede dividir por cero.");
+      mostrarResultado("Infinito");
+      return;
+    }
+
+    mostrarResultado(n1 / n2);
+  } catch (error) {
+    mostrarResultado("Error");
+  }
+}
